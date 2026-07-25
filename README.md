@@ -1,5 +1,10 @@
 # Beam
 
+[![GitHub release](https://img.shields.io/github/v/release/TAGISWILD/beam-tv)](https://github.com/TAGISWILD/beam-tv/releases)
+[![MIT License](https://img.shields.io/github/license/TAGISWILD/beam-tv)](LICENSE)
+[![Tests](https://img.shields.io/badge/tests-3%20passing-brightgreen)](beam-server/test/library.test.js)
+[![GitHub stars](https://img.shields.io/github/stars/TAGISWILD/beam-tv?style=social)](https://github.com/TAGISWILD/beam-tv/stargazers)
+
 Beam is an open-source local media player for Samsung Tizen TVs. It browses and
 plays video, audio, images, and sidecar subtitles from USB storage and compatible
 media servers on the same local network.
@@ -11,6 +16,9 @@ The project has two parts:
   from a Mac or Windows computer over the local network.
 
 Beam has no accounts, cloud service, advertising, analytics, or DRM.
+
+**[Try the browser preview](https://tagiswild.github.io/beam-tv/)** ·
+**[Download the latest release](https://github.com/TAGISWILD/beam-tv/releases/latest)**
 
 ## Features
 

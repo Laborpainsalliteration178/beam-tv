@@ -14,6 +14,7 @@
 # Node / Electron
 node_modules/
 beam-server/dist/
+beam-server/release-dist/
 *.dmg
 *.blockmap
 
