@@ -1,0 +1,37 @@
+# macOS and editors
+.DS_Store
+.idea/
+.vscode/
+
+# Local development helpers
+.claude/
+
+# Tizen build output and signing artifacts
+.buildResult/
+*.wgt
+*.tpk
+
+# Node / Electron
+node_modules/
+beam-server/dist/
+*.dmg
+*.blockmap
+
+# Logs and runtime state
+*.log
+npm-debug.log*
+beam-server-settings.json
+
+# Seller Office and document-generation artifacts
+.docx-render/
+Beam-Samsung-Verification-Guide.docx
+tools/create_samsung_verification_guide.py
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx

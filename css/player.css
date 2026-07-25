@@ -1,0 +1,190 @@
+#screen-player { padding: 0; background: #000; }
+#sidebar { transition: opacity var(--dur-med) var(--ease-out); }
+
+#player-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  object-fit: contain;
+}
+
+#player-audio-art {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--bg-panel-solid), var(--bg-void));
+}
+#player-audio-glyph {
+  width: 220px; height: 220px;
+  border-radius: var(--radius-l);
+  background: var(--bg-panel-hover);
+  border: 1px solid var(--hairline);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+}
+
+#player-controls {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px var(--safe);
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), transparent 22%, transparent 68%, rgba(0,0,0,0.75));
+  opacity: 1;
+  transition: opacity var(--dur-med) var(--ease-out);
+}
+#player-controls.hidden { opacity: 0; }
+
+#player-title {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+#player-bottom { display: flex; align-items: center; gap: 22px; }
+
+#player-playicon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.14);
+  backdrop-filter: blur(10px);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+#player-playicon .i-pause { display: none; }
+#player-playicon.is-playing .i-play { display: none; }
+#player-playicon.is-playing .i-pause { display: block; }
+
+#player-progress {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.22);
+  overflow: hidden;
+}
+#player-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  border-radius: 999px;
+  transition: width 120ms linear;
+}
+
+#player-time {
+  font-variant-numeric: tabular-nums;
+  font-size: 18px;
+  color: var(--ink-2);
+  min-width: 130px;
+  text-align: right;
+}
+
+#player-hint {
+  position: absolute;
+  bottom: 16px; right: var(--safe);
+  font-size: 14px;
+  color: var(--ink-3);
+}
+
+/* Browser-default WebVTT cue styling is sized for close-up desktop viewing —
+   far too small to read from a couch. Bump size/contrast for TV distance. */
+#player-video::cue {
+  font-size: 34px;
+  font-family: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+
+/* ---------- Picture-in-picture ----------
+ * Shrinks the fullscreen player into a corner overlay while the browse
+ * screen underneath becomes active/navigable again. Higher specificity
+ * (.screen.pip vs .screen) is what overrides the base inactive-screen
+ * opacity:0/pointer-events:none — this screen is deliberately NOT given
+ * .active while in this mode (the screen behind it has that instead). */
+#screen-player.pip {
+  inset: auto 32px 32px auto;
+  width: var(--pip-w);
+  height: var(--pip-h);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  opacity: 1;
+  transform: none;
+  pointer-events: none;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--hairline);
+  z-index: 60;
+  /* inset is included (not just width/height) so entering/exiting PiP slides
+     and resizes into the corner in one continuous motion instead of the box
+     silently teleporting to its corner position on the same frame the
+     .pip class lands, with only the shrink itself animating. */
+  transition: width var(--dur-med) var(--ease-spring), height var(--dur-med) var(--ease-spring),
+    inset var(--dur-med) var(--ease-spring);
+}
+#screen-player.pip #player-controls,
+#screen-player.pip #player-hint { display: none; }
+#screen-player.pip #player-audio-glyph { width: 96px; height: 96px; }
+#screen-player.pip #player-audio-glyph svg { width: 34px; height: 34px; }
+
+#pip-badge {
+  position: absolute;
+  left: 10px; bottom: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-1);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  padding: 5px 10px;
+  border-radius: 999px;
+  display: none;
+  z-index: 2;
+}
+#screen-player.pip #pip-badge { display: block; }
+
+/* ---------- Photo viewer ---------- */
+#screen-photo { padding: 0; background: #000; }
+#photo-stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+#photo-img {
+  /* width/height: 100% (not max-width/max-height) so a smaller source image
+     — a screenshot, a downloaded picture, this mock's 640x360 test SVG —
+     still scales UP to fill the display via object-fit, instead of only
+     ever being capped down and floating tiny in the middle of the screen. */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 260ms var(--ease-out), transform 260ms var(--ease-out);
+}
+#photo-img.loaded { opacity: 1; transform: scale(1); }
+
+#photo-controls {
+  position: absolute;
+  left: var(--safe); right: var(--safe); top: 40px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55), transparent);
+  padding: 16px 0 40px;
+}
+#photo-title { font-size: 26px; font-weight: 800; }
+#photo-counter { font-size: 16px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
+#photo-hint {
+  position: absolute;
+  bottom: 16px; right: var(--safe);
+  font-size: 14px;
+  color: var(--ink-3);
+}

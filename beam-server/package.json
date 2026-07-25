@@ -1,0 +1,46 @@
+{
+  "name": "beam-server",
+  "version": "1.0.0",
+  "description": "Beam Companion Server — shares folders on your network for the Beam TV app to discover, browse, and play.",
+  "main": "main/main.js",
+  "author": "Beam contributors",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test",
+    "dist:mac": "electron-builder --mac",
+    "dist:win": "electron-builder --win"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "electron": "^43.2.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.beam.companionserver",
+    "productName": "Beam Server",
+    "files": [
+      "main/**/*",
+      "renderer/**/*",
+      "icons/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "icon": "icons/icon.icns",
+      "category": "public.app-category.utilities",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "icons/icon.ico",
+      "target": [
+        "nsis"
+      ]
+    }
+  }
+}

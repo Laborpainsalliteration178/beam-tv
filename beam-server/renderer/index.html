@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Beam Server</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="drag-region"></div>
+
+  <header id="app-header">
+    <div id="app-mark"></div>
+    <div>
+      <h1>Beam Server</h1>
+      <p>Shares folders on your network for the Beam TV app.</p>
+    </div>
+  </header>
+
+  <div id="error-banner" class="hidden"></div>
+
+  <main>
+    <section class="card" id="status-card">
+      <div id="status-row">
+        <div id="status-dot"></div>
+        <div id="status-text">
+          <div id="status-headline">Starting…</div>
+          <div id="status-address"></div>
+        </div>
+        <button id="toggle-btn" class="btn">Stop</button>
+      </div>
+
+      <div class="field">
+        <label for="name-input">Server name <span class="hint">(shown on your TV)</span></label>
+        <input id="name-input" type="text" spellcheck="false">
+      </div>
+    </section>
+
+    <section class="card" id="folders-card">
+      <div class="card-header">
+        <h2>Shared Folders</h2>
+        <button id="add-folder-btn" class="btn primary">+ Add Folder</button>
+      </div>
+      <div id="folder-list"></div>
+      <div id="folders-empty" class="empty hidden">
+        <p>No folders shared yet. Add one so Beam has something to browse.</p>
+      </div>
+    </section>
+
+    <p id="discover-hint">
+      On your TV: <strong>Beam → Network → Scan Network</strong> should find this automatically.
+      If it doesn't, add it manually using the address above followed by
+      <code>/description.xml</code>.
+    </p>
+  </main>
+
+  <script src="js/renderer.js"></script>
+</body>
+</html>
