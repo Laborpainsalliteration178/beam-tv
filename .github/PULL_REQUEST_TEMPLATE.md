@@ -30,4 +30,3 @@ addresses, server names, and private media details.
 - [ ] New persistent data or network behavior is documented.
 - [ ] User-facing behavior and compatibility notes are updated.
 - [ ] Tests were added or updated where practical.
-

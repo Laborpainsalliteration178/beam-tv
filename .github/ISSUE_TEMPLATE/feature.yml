@@ -31,4 +31,3 @@ body:
     attributes:
       label: Platform and compatibility impact
       description: Note affected TV years, Tizen APIs, network protocols, permissions, privacy, or companion-server behavior.
-

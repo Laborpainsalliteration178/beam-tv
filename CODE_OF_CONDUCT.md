@@ -45,4 +45,3 @@ the reporter's privacy, and respond proportionately.
 
 This code applies in the Beam repository and in public spaces where someone is
 representing the project or its community.
-

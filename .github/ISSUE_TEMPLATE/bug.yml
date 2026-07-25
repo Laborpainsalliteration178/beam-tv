@@ -61,4 +61,3 @@ body:
     attributes:
       label: Media details and logs
       description: Include container/codecs and sanitized logs when relevant. Do not upload copyrighted media.
-

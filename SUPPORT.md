@@ -23,4 +23,3 @@ details before posting.
 
 Do not open a public issue for a vulnerability. Follow
 [SECURITY.md](SECURITY.md) and use GitHub private vulnerability reporting.
-
