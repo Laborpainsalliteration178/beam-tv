@@ -17,7 +17,7 @@ The project has two parts:
 
 Beam has no accounts, cloud service, advertising, analytics, or DRM.
 
-**[Try the browser preview](https://tagiswild.github.io/beam-tv/)** ·
+**[Try the browser preview](https://atharvachauhan.site/beam-tv/)** ·
 **[Download the latest release](https://github.com/TAGISWILD/beam-tv/releases/latest)**
 
 ## Features
