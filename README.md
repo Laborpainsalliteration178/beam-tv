@@ -79,6 +79,11 @@ and
 
 The application manifest currently targets Tizen 6.0 or newer.
 
+As an alternative to Tizen Studio, [apps2samsung.com](https://apps2samsung.com/)
+is a third-party, open-source (MIT) tool that sideloads apps onto Samsung TVs
+using the same official developer/certificate mechanism, without the full
+Tizen Studio install. It is not affiliated with Samsung or this project.
+
 ### Companion server
 
 - Node.js 20 or newer
