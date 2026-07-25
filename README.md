@@ -37,7 +37,8 @@ Beam has no accounts, cloud service, advertising, analytics, or DRM.
 ```text
 .
 ├── config.xml               Tizen application manifest
-├── index.html               TV application entry point
+├── index.html               Public product landing page
+├── tv.html                  Tizen TV application entry point
 ├── css/                     TV user interface styles
 ├── icons/                   TV application icons
 ├── js/                      TV application source
@@ -71,7 +72,7 @@ The browser preview uses mock Tizen APIs and sample data:
 python3 -m http.server 8790
 ```
 
-Open <http://localhost:8790>.
+Open <http://localhost:8790/tv.html>.
 
 The browser preview is useful for interface work, but USB, remote-control, and
 real Tizen platform behavior must be tested on a TV or emulator.
