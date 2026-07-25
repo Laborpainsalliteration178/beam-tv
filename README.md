@@ -4,6 +4,7 @@
 [![MIT License](https://img.shields.io/github/license/TAGISWILD/beam-tv)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-3%20passing-brightgreen)](beam-server/test/library.test.js)
 [![GitHub stars](https://img.shields.io/github/stars/TAGISWILD/beam-tv?style=social)](https://github.com/TAGISWILD/beam-tv/stargazers)
+[![Hacktoberfest](https://img.shields.io/badge/Hacktoberfest-ready-FF7518)](https://github.com/TAGISWILD/beam-tv/issues?q=is%3Aissue+is%3Aopen+label%3Ahacktoberfest)
 
 Beam is an open-source local media player for Samsung Tizen TVs. It browses and
 plays video, audio, images, and sidecar subtitles from USB storage and compatible
@@ -31,6 +32,26 @@ Beam has no accounts, cloud service, advertising, analytics, or DRM.
 - Samsung remote and media-key navigation
 - HTML picture-in-picture overlay
 - Read-only access to selected media
+
+## Remaining jobs
+
+Beam v1.0.0 is usable, but there is meaningful work left for contributors.
+Please comment on an issue before starting so two people do not solve the same
+problem independently.
+
+| Job | Area | Difficulty | Issue |
+|---|---|---:|---|
+| Run companion-server tests in GitHub Actions | Tooling | Starter | [#2](https://github.com/TAGISWILD/beam-tv/issues/2) |
+| Test HTTP byte-range media streaming | Companion server | Starter | [#3](https://github.com/TAGISWILD/beam-tv/issues/3) |
+| Correct ASS/SSA subtitle handling | TV app | Intermediate | [#4](https://github.com/TAGISWILD/beam-tv/issues/4) |
+| Design IPv6-capable local discovery | TV + companion | Advanced | [#5](https://github.com/TAGISWILD/beam-tv/issues/5) |
+| Complete an accessibility and navigation audit | TV app | Intermediate | [#6](https://github.com/TAGISWILD/beam-tv/issues/6) |
+| Add localization infrastructure and Hindi | TV app | Intermediate | [#7](https://github.com/TAGISWILD/beam-tv/issues/7) |
+
+More work is tracked under
+[`help wanted`](https://github.com/TAGISWILD/beam-tv/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+and
+[`good first issue`](https://github.com/TAGISWILD/beam-tv/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
 
 ## Project structure
 
@@ -149,8 +170,10 @@ Please report security issues according to [SECURITY.md](SECURITY.md).
 
 ## Contributing
 
-Bug reports and pull requests are welcome. See
-[CONTRIBUTING.md](CONTRIBUTING.md) before submitting a change.
+Bug reports, design proposals, translations, testing, and pull requests are
+welcome. Beam is opted into Hacktoberfest and accepts meaningful contributions
+throughout the year. See [CONTRIBUTING.md](CONTRIBUTING.md) and the
+[Code of Conduct](CODE_OF_CONDUCT.md) before submitting a change.
 
 ## License
 

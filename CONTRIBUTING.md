@@ -2,6 +2,23 @@
 
 Thank you for helping improve Beam.
 
+## Find work
+
+Start with the
+[`good first issue`](https://github.com/TAGISWILD/beam-tv/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22),
+[`help wanted`](https://github.com/TAGISWILD/beam-tv/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22),
+or
+[`hacktoberfest`](https://github.com/TAGISWILD/beam-tv/issues?q=is%3Aissue+is%3Aopen+label%3Ahacktoberfest)
+queues.
+
+Before starting:
+
+1. Read the entire issue and its acceptance criteria.
+2. Comment with the approach you intend to take.
+3. Wait for a maintainer response when the issue involves architecture, a new
+   dependency, a protocol change, privacy, or security.
+4. Keep one pull request focused on one issue.
+
 ## Before opening an issue
 
 - Search existing issues to avoid duplicates.
@@ -22,6 +39,23 @@ Thank you for helping improve Beam.
 6. Update documentation when behavior or setup changes.
 7. Open a pull request describing the change and how it was tested.
 
+## Hacktoberfest
+
+Beam opts in through the `hacktoberfest` repository topic. Hacktoberfest pull
+requests must be useful, scoped to a real issue, and meet the same standards as
+every other contribution.
+
+- Opening a pull request does not guarantee acceptance.
+- Automated formatting-only, generated-noise, duplicate, or unrelated pull
+  requests will be closed.
+- Do not divide one logical change into several trivial pull requests.
+- Maintainers may label low-quality submissions `spam` or `invalid`.
+- A qualifying pull request may be merged, approved, or labeled
+  `hacktoberfest-accepted` after review.
+
+The event rules can change from year to year. Contributors should verify the
+current rules on the official Hacktoberfest website.
+
 ## Code guidelines
 
 - Keep the TV application dependency-free unless a dependency is clearly
@@ -39,3 +73,8 @@ Thank you for helping improve Beam.
 - [ ] New persistent data is documented in the privacy policy.
 - [ ] User-facing behavior is documented.
 - [ ] Testing and hardware limitations are described accurately.
+
+## Community
+
+Be respectful and constructive in issues, discussions, reviews, and pull
+requests. Participation is governed by [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
